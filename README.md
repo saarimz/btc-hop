@@ -6,6 +6,8 @@ A timehop Chrome Extension for the price of Bitcoin.
 
 This Chrome Extension uses the [Coindesk API](https://www.coindesk.com/api/) to get the closing price of 1 Bitcoin (BTC) in USD x years ago from today so that you can feel sorry for yourself.
 
+You can add the extension by downloading from the Chrome Extension Store [here](https://chrome.google.com/webstore/detail/btc-hop/glkncpihhcnafncilnphhchplmplklnp).
+
 ## Installation instructions (local)
 
 1. Download / clone the repo.
