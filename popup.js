@@ -1,22 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {
+$(function () {
 
-    var timehopButton = document.getElementById('timehop');
 
-    timehopButton.addEventListener('click', function() {
-        
-      var currentTime = Date.now();
-      chrome.tabs.getSelected(null, function(tab) {
-        d = document;
-        var f = d.createElement('form');
-        f.action = 'http://gtmetrix.com/analyze.html?bm';
-        f.method = 'post';
-        var i = d.createElement('input');
-        i.type = 'hidden';
-        i.name = 'url';
-        i.value = tab.url;
-        f.appendChild(i);
-        d.body.appendChild(f);
-        f.submit();
-      });
-    }, false);
-  }, false);
+    var getPriceButton = $("#get_price");
+    var priceView = $("#price");
+    var selectedValue = $("#year_selector");
+    var yearsAgo = selectedValue.val();
+
+    var getPrice = function getPrice(years) {
+        var currentDate = new Date(Date.now());
+        var selectedYear = currentDate.getFullYear() - Number(years);
+        var selectedMonth = currentDate.getMonth() + 1;
+        var selectedDay = currentDate.getDate();
+        var selectedDateString = [selectedYear,selectedMonth,selectedDay].join("-");
+        var selectedDate = new Date(selectedDateString).toISOString().split('T')[0];
+        var url = "https://api.coindesk.com/v1/bpi/historical/close.json?start=" + selectedDate + "&end=" + selectedDate;
+        var data;
+
+        $.getJSON(url).done(function(response){
+            data = (Object.values(response.bpi)[0].toFixed(2));
+            priceView.html(data);
+        });
+    };
+
+    selectedValue.change(function(){
+        yearsAgo = selectedValue.val();
+        getPrice(yearsAgo);
+    });
+
+    //on initialize
+    getPrice(yearsAgo);
+
+});

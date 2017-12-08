@@ -1,11 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>BTC Hop</title>
-    <script src="popup.js"></script>
+      <title>BTC Timehop</title>
+      <link rel="stylesheet" href="styles.css"></link>
+      <script src="jquery-3.2.1.min.js"></script>
+      <script src="popup.js"></script>
   </head>
   <body>
-    <h1>Go back in time</h1>
-    <button id="timehop">Timehop!</button>
+    <div class="container">
+      <div id="settings">
+          <p>On this day ...</p>
+          <select id="year_selector">
+            <option value="1">1 year ago</option>
+            <option value="2">2 years ago</option>
+            <option value="3">3 years ago</option>
+            <option value="4">4 years ago</option>
+            <option value="5">5 years ago</option>
+          </select>
+      </div>
+      <p>The price of BTC was</p>
+      <div id="price_container">
+        <p>US $ <strong><span id="price"></span></strong></p>
+      </div>
+    </div>
   </body>
 </html>
