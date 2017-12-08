@@ -7,7 +7,14 @@
       <script src="popup.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" align="center">
+      <div class="header">
+        <img class="header__icon" src="images/icon256.png" alt="icon"/>
+        <h3 class="header__title">BTC Hop</h3>
+      </div>
+      <div id="current_price">
+        <p>Current BTC Price: US $ <strong><span id="price_now"></span></strong></p>
+      </div>
       <div id="settings">
           <p>On this day ...</p>
           <select id="year_selector">
@@ -18,10 +25,11 @@
             <option value="5">5 years ago</option>
           </select>
       </div>
-      <p>The price of BTC was</p>
+      <p>The price of 1 BTC was</p>
       <div id="price_container">
         <p>US $ <strong><span id="price"></span></strong></p>
       </div>
+      <img id="money_gif" src="images/money.gif" alt="money_gif" />
     </div>
   </body>
 </html>

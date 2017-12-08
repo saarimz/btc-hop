@@ -1,10 +1,52 @@
 body {
-    font-family: sans-serif;
-    font-size: 62.50%;
+    font-family: Avenir, Helvetica, sans-serif;
+    font-size: 62.5%;
+    background: #ADA996; 
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);        
 }
 
 .container {
-    border: 1px solid gray;
-    width: 12rem;
+    width: 14rem;
+    padding: 0.3rem 0.9rem;
     text-align: center;
+}
+
+.header {
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__icon {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+}
+
+.header__title {
+    display: flex;
+    margin-left: 0.6rem;
+}
+
+#current_price {
+    font-size: 0.7rem;
+}
+
+#price_container {
+    font-size: 0.7rem;
+}
+
+#price_now {
+    color: #549F93;
+}
+
+#price {
+    color: #ED254E;
+    text-decoration: underline;
+}
+
+#money_gif {
+    width: 8rem;
+    height: 6rem;
 }
