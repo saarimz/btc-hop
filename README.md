@@ -2,7 +2,7 @@
 
 A timehop Chrome Extension for the price of Bitcoin.
 
-![screenshot preview](./images/screenshot.png?raw=true "BTC Hop Screenshot")
+![screenshot preview](./images/screenshot.png "BTC Hop Screenshot")
 
 ## How does it work?
 
